@@ -33,7 +33,7 @@
         system: let
           pkgs = nixpkgs.legacyPackages.${system};
           fs = lib.fileset;
-          zig = zig-overlay.packages.${system}.master;
+          zig = zig-overlay.packages.${system}.zig_0_16_0;
           target = builtins.replaceStrings ["darwin"] ["macos"] system;
         in {
           formatter.${system} = pkgs.alejandra;
